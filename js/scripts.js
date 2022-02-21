@@ -1,22 +1,43 @@
 const pokemonContainer = document.querySelector('.pokemon-container');
 
-const inputValue = document.querySelector('.pokemon-input').value
+let pokemons = []
 
 function fetchPokemon(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then(res => res.json())
     .then(data => {
         createPokemon(data);
+        pokemons.push(data.name);
     })
 }
 
-// function fetchPokemonByName(name) {
-//     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-//     .then(res => res.json())
-//     .then(data => {
-//         createPokemon(data);
-//     })
-// }
+function fetchPokemonByName(name) {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
+    .then(res => res.json())
+    .then(data => {
+        createPokemon(data);
+        pokemons.push(data.name);
+    })
+}
+
+const pokemonInput = document.querySelector('.pokemon-input')
+const pokemonInputValue = document.querySelector('.pokemon-input').value
+const searchBar = document.querySelector('.search-bar')
+searchBar.addEventListener('submit', (e) => {
+    e.preventDefault()
+    fetchPokemonByName(pokemonInput.value.toLowerCase())
+})
+
+const btnDeletePokemons = document.querySelector('.btnDelete')
+
+btnDeletePokemons.addEventListener('click', (e) => {
+    e.preventDefault()
+    pokemons = []
+
+    const pokemonContainer = document.querySelector('.pokemon-container')
+    pokemonContainer.innerHTML = '';
+})
+
 
 function fetchPokemons(number) {
     for (let i = 1; i <= number; i++) {

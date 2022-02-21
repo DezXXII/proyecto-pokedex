@@ -37,7 +37,10 @@ body {
 
 /** Search Pokemon Input **/
 
-.search-bar {
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     text-align: center;
     margin-bottom: 5rem;
 }
@@ -49,6 +52,8 @@ input {
     padding-right: 10rem; */
 
     padding: 1.5rem 10rem 1.5rem 1rem;
+    border-radius: .5rem;
+    border: none;
 }
 
 input:focus {
@@ -68,7 +73,7 @@ input:focus {
     background-color: white;
     border-radius: 2rem;
     width: 30rem;
-    text-align: center
+    text-align: center;
 }
 
 .pokemon-block p {
@@ -80,8 +85,23 @@ input:focus {
     font-size: 2.5rem;
 }
 
-/* .img-container {
-    background-image: url(./blob.svg);
+.img-container {
+    background-image: url(../img/blob.svg);
     background-repeat: no-repeat;
     background-position: center;
-} */
+}
+
+/** Buttons **/
+
+.btnDelete {
+    padding: 1.5rem;
+    background-color: #990000;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+}
+
+.btnDelete:hover {
+    cursor: pointer;
+    background-color: #660000;
+}
