@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-image: url(./app-background.png);
+    background-image: url(../img/app-background.png);
     color: white;
     font-size: 1.8rem;
     font-family: 'Open Sans';
