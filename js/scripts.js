@@ -23,9 +23,15 @@ function fetchPokemonByName(name) {
 const pokemonInput = document.querySelector('.pokemon-input')
 const pokemonInputValue = document.querySelector('.pokemon-input').value
 const searchBar = document.querySelector('.search-bar')
+
 searchBar.addEventListener('submit', (e) => {
     e.preventDefault()
-    fetchPokemonByName(pokemonInput.value.toLowerCase())
+
+    if(pokemons.includes(pokemonInput.value.toLowerCase())) {
+        alert('Ese pokemon ya está en pantalla');
+    } else {
+        fetchPokemonByName(pokemonInput.value.toLowerCase())
+    }
 })
 
 const btnDeletePokemons = document.querySelector('.btnDelete')

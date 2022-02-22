@@ -105,3 +105,7 @@ input:focus {
     cursor: pointer;
     background-color: #660000;
 }
+
+@media (min-width: 480px) {
+
+}
