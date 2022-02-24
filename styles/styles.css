@@ -106,6 +106,28 @@ input:focus {
     background-color: #660000;
 }
 
-@media (min-width: 480px) {
+/** Pagination **/
 
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.prevBtn, .nextBtn {
+    color: white;
+    padding: 1rem;
+    background-color: #1aa3ff;
+    border: none;
+    border-radius: .5rem;
+    text-shadow: 1px 1px 1px black;
+}
+
+.prevBtn:hover, .nextBtn:hover {
+    cursor: pointer;
+    background: cornflowerblue;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
+    box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
 }

@@ -1,6 +1,6 @@
 const pokemonContainer = document.querySelector('.pokemon-container');
 
-let pokemons = []
+// Section: Fetching pokemons
 
 function fetchPokemon(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
@@ -11,6 +11,37 @@ function fetchPokemon(id) {
     })
 }
 
+let offset = 1;
+let limit = 9;
+
+// Section: Pagination
+
+const previousPaginationButton = document.querySelector('.prevBtn');
+const nextPaginationButton = document.querySelector('.nextBtn');
+
+previousPaginationButton.addEventListener('click', (e) => {
+    if (offset != 1) { 
+        offset -= 9;
+        fetchPokemons(offset, limit);
+    }
+})
+
+nextPaginationButton.addEventListener('click', (e) => {
+    offset += 9;
+    fetchPokemons(offset, limit);
+
+    previousPaginationButton.style.display = "block";
+    nextPaginationButton.textContent = "Next";
+})
+
+function fetchPokemons(offset, limit) {
+    for (let i = offset; i <= offset + limit; i++) {
+        fetchPokemon(i);
+    }
+}
+
+// Section: Fetching pokemons by name
+
 function fetchPokemonByName(name) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
     .then(res => res.json())
@@ -19,6 +50,8 @@ function fetchPokemonByName(name) {
         pokemons.push(data.name);
     })
 }
+
+let pokemons = []
 
 const pokemonInput = document.querySelector('.pokemon-input')
 const pokemonInputValue = document.querySelector('.pokemon-input').value
@@ -34,22 +67,23 @@ searchBar.addEventListener('submit', (e) => {
     }
 })
 
+// Section: Deleting all pokemons
+
 const btnDeletePokemons = document.querySelector('.btnDelete')
 
 btnDeletePokemons.addEventListener('click', (e) => {
     e.preventDefault()
     pokemons = []
 
+    offset = -8;
+
     const pokemonContainer = document.querySelector('.pokemon-container')
     pokemonContainer.innerHTML = '';
+
+    previousPaginationButton.style.display = "none";
+    nextPaginationButton.textContent = "Show Pokemons";
 })
-
-
-function fetchPokemons(number) {
-    for (let i = 1; i <= number; i++) {
-        fetchPokemon(i);
-    }
-}
+// Section: Creating the pokemons containers with their corresponding data
 
 function createPokemon(pokemon) {
     const card = document.createElement('div')
@@ -77,4 +111,4 @@ function createPokemon(pokemon) {
     pokemonContainer.appendChild(card);
 }
 
-fetchPokemons(20)
+fetchPokemons(offset, limit);
