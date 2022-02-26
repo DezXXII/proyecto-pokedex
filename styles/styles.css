@@ -29,6 +29,7 @@ body {
 .header-container h1 {
     font-size: 8rem;
     margin-bottom: -1.5rem;
+    margin-top: 1rem;
 }
 
 .header-container p {
@@ -42,7 +43,7 @@ body {
     justify-content: center;
     gap: 2rem;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 5.5rem;
 }
 
 input {
@@ -74,21 +75,87 @@ input:focus {
     border-radius: 2rem;
     width: 30rem;
     text-align: center;
+    backface-visibility: hidden;
 }
 
 .pokemon-block p {
     color: black;
 }
 
+.pokemon-block img {
+    width: 11rem;
+}
+
 .name {
     font-weight: 700;
     font-size: 2.5rem;
+    padding-bottom: 2rem;
 }
 
 .img-container {
     background-image: url(../img/blob.svg);
     background-repeat: no-repeat;
     background-position: center;
+}
+
+/** Searched Pokemon Container **/
+
+.searched-pokemon-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 1rem;
+}
+
+/** Flip Card Container **/
+
+.pokemon-block-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    bottom: 10.4%;
+    backface-visibility: hidden;
+    color: black;
+    background-color: white;
+    background-color: white;
+    width: 30rem;
+    height: 226.13px;
+    border-radius: 2rem;
+}
+
+.pokemon-block-back p {
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.flip-card:hover .card-container {
+    transform: rotateY(180deg);
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/** Types Container **/
+
+.types {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+
+/** Stats Container **/
+
+.stats p {
+    font-size: 1.7rem;
+    margin: 0;
 }
 
 /** Buttons **/
@@ -112,7 +179,7 @@ input:focus {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
 }
 
 .prevBtn, .nextBtn {
