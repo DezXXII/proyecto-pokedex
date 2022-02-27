@@ -193,69 +193,77 @@ function searchedPokemon(pokemon) {
 
         // Logos
 
+    const bugLogo = document.createElement('img')
+    bugLogo.classList.add('svg-image')
+    bugLogo.src = '../img/bug.svg'
+
     const darkLogo = document.createElement('img')
     darkLogo.classList.add('svg-image')
-    darkLogo.src = '.././img/dark.svg'
+    darkLogo.src = '../img/dark.svg'
     
     const dragonLogo = document.createElement('img')
     dragonLogo.classList.add('svg-image')
-    dragonLogo.src = '.././img/dragon.svg'
+    dragonLogo.src = '../img/dragon.svg'
 
     const electricLogo = document.createElement('img')
     electricLogo.classList.add('svg-image')
-    electricLogo.src = '.././img/electric.svg'
+    electricLogo.src = '../img/electric.svg'
     
     const fairyLogo = document.createElement('img')
     fairyLogo.classList.add('svg-image')
-    fairyLogo.src = '.././img/fairy.svg'
+    fairyLogo.src = '../img/fairy.svg'
     
     const fightingLogo = document.createElement('img')
     fightingLogo.classList.add('svg-image')
-    fightingLogo.src = '.././img/fighting.svg'
+    fightingLogo.src = '../img/fighting.svg'
     
     const fireLogo = document.createElement('img')
     fireLogo.classList.add('svg-image')
-    fireLogo.src = '.././img/fire.svg'
+    fireLogo.src = '../img/fire.svg'
     
     const flyingLogo = document.createElement('img')
     flyingLogo.classList.add('svg-image')
-    flyingLogo.src = '.././img/dark.svg'
+    flyingLogo.src = '../img/dark.svg'
     
     const ghostLogo = document.createElement('img')
     ghostLogo.classList.add('svg-image')
-    ghostLogo.src = '.././img/ghost.svg'
+    ghostLogo.src = '../img/ghost.svg'
     
     const grassLogo = document.createElement('img')
     grassLogo.classList.add('svg-image')
-    grassLogo.src = '.././img/grass.svg'
+    grassLogo.src = '../img/grass.svg'
     
     const groundLogo = document.createElement('img')
     groundLogo.classList.add('svg-image')
-    groundLogo.src = '.././img/ground.svg'
+    groundLogo.src = '../img/ground.svg'
     
     const iceLogo = document.createElement('img')
     iceLogo.classList.add('svg-image')
-    iceLogo.src = '.././img/ice.svg'
+    iceLogo.src = '../img/ice.svg'
     
     const normalLogo = document.createElement('img')
     normalLogo.classList.add('svg-image')
-    normalLogo.src = '.././img/normal.svg'
+    normalLogo.src = '../img/normal.svg'
     
     const poisonLogo = document.createElement('img')
     poisonLogo.classList.add('svg-image')
-    poisonLogo.src = '.././img/poison.svg'
+    poisonLogo.src = '../img/poison.svg'
     
     const psychicLogo = document.createElement('img')
     psychicLogo.classList.add('svg-image')
-    psychicLogo.src = '.././img/psychic.svg'
+    psychicLogo.src = '../img/psychic.svg'
     
     const rockLogo = document.createElement('img')
     rockLogo.classList.add('svg-image')
-    rockLogo.src = '.././img/rock.svg'
+    rockLogo.src = '../img/rock.svg'
+
+    const steelLogo = document.createElement('img')
+    steelLogo.classList.add('svg-image')
+    steelLogo.src = '../img/steel.svg'
     
     const waterLogo = document.createElement('img')
     waterLogo.classList.add('svg-image')
-    waterLogo.src = '.././img/water.svg'
+    waterLogo.src = '../img/water.svg'
 
     const type1Container = document.createElement('div')
     type1Container.classList.add('type1')
@@ -264,6 +272,9 @@ function searchedPokemon(pokemon) {
     type2Container.classList.add('type2')
     
     switch (statType1.innerHTML) {
+        case "Bug":
+            type1Container.appendChild(bugLogo)
+            break;
         case "Dark":
             type1Container.appendChild(darkLogo)
             break;
@@ -308,6 +319,9 @@ function searchedPokemon(pokemon) {
             break;
         case "Rock":
             type1Container.appendChild(rockLogo)
+            break;
+        case "Steel":
+            type1Container.appendChild(steelLogo)
             break;
         case "Water":
             type1Container.appendChild(waterLogo)
@@ -361,6 +375,9 @@ function searchedPokemon(pokemon) {
             break;
         case "Rock":
             type2Container.appendChild(rockLogo)
+            break;
+        case "Steel":
+            type1Container.appendChild(steelLogo)
             break;
         case "Water":
             type2Container.appendChild(waterLogo)
@@ -523,69 +540,77 @@ function createPokemon(pokemon) {
     // ******************************************************************************** //
     // Logos
 
+    const bugLogo = document.createElement('img')
+    bugLogo.classList.add('svg-image')
+    bugLogo.src = '../img/bug.svg'
+
     const darkLogo = document.createElement('img')
     darkLogo.classList.add('svg-image')
-    darkLogo.src = '.././img/dark.svg'
+    darkLogo.src = '../img/dark.svg'
     
     const dragonLogo = document.createElement('img')
     dragonLogo.classList.add('svg-image')
-    dragonLogo.src = '.././img/dragon.svg'
+    dragonLogo.src = '../img/dragon.svg'
 
     const electricLogo = document.createElement('img')
     electricLogo.classList.add('svg-image')
-    electricLogo.src = '.././img/electric.svg'
+    electricLogo.src = '../img/electric.svg'
     
     const fairyLogo = document.createElement('img')
     fairyLogo.classList.add('svg-image')
-    fairyLogo.src = '.././img/fairy.svg'
+    fairyLogo.src = '../img/fairy.svg'
     
     const fightingLogo = document.createElement('img')
     fightingLogo.classList.add('svg-image')
-    fightingLogo.src = '.././img/fighting.svg'
+    fightingLogo.src = '../img/fighting.svg'
     
     const fireLogo = document.createElement('img')
     fireLogo.classList.add('svg-image')
-    fireLogo.src = '.././img/fire.svg'
+    fireLogo.src = '../img/fire.svg'
     
     const flyingLogo = document.createElement('img')
     flyingLogo.classList.add('svg-image')
-    flyingLogo.src = '.././img/dark.svg'
+    flyingLogo.src = '../img/dark.svg'
     
     const ghostLogo = document.createElement('img')
     ghostLogo.classList.add('svg-image')
-    ghostLogo.src = '.././img/ghost.svg'
+    ghostLogo.src = '../img/ghost.svg'
     
     const grassLogo = document.createElement('img')
     grassLogo.classList.add('svg-image')
-    grassLogo.src = '.././img/grass.svg'
+    grassLogo.src = '../img/grass.svg'
     
     const groundLogo = document.createElement('img')
     groundLogo.classList.add('svg-image')
-    groundLogo.src = '.././img/ground.svg'
+    groundLogo.src = '../img/ground.svg'
     
     const iceLogo = document.createElement('img')
     iceLogo.classList.add('svg-image')
-    iceLogo.src = '.././img/ice.svg'
+    iceLogo.src = '../img/ice.svg'
     
     const normalLogo = document.createElement('img')
     normalLogo.classList.add('svg-image')
-    normalLogo.src = '.././img/normal.svg'
+    normalLogo.src = '../img/normal.svg'
     
     const poisonLogo = document.createElement('img')
     poisonLogo.classList.add('svg-image')
-    poisonLogo.src = '.././img/poison.svg'
+    poisonLogo.src = '../img/poison.svg'
     
     const psychicLogo = document.createElement('img')
     psychicLogo.classList.add('svg-image')
-    psychicLogo.src = '.././img/psychic.svg'
+    psychicLogo.src = '../img/psychic.svg'
     
     const rockLogo = document.createElement('img')
     rockLogo.classList.add('svg-image')
-    rockLogo.src = '.././img/rock.svg'
+    rockLogo.src = '../img/rock.svg'
+
+    const steelLogo = document.createElement('img')
+    steelLogo.classList.add('svg-image')
+    steelLogo.src = '../img/steel.svg'
     
     const waterLogo = document.createElement('img')
     waterLogo.classList.add('svg-image')
-    waterLogo.src = '.././img/water.svg'
+    waterLogo.src = '../img/water.svg'
 
     const type1Container = document.createElement('div')
     type1Container.classList.add('type1')
@@ -594,6 +619,9 @@ function createPokemon(pokemon) {
     type2Container.classList.add('type2')
     
     switch (statType1.innerHTML) {
+        case "Bug":
+            type1Container.appendChild(bugLogo)
+            break;
         case "Dark":
             type1Container.appendChild(darkLogo)
             break;
@@ -639,6 +667,9 @@ function createPokemon(pokemon) {
         case "Rock":
             type1Container.appendChild(rockLogo)
             break;
+        case "Steel":
+            type1Container.appendChild(steelLogo)
+            break;
         case "Water":
             type1Container.appendChild(waterLogo)
             break;
@@ -647,6 +678,9 @@ function createPokemon(pokemon) {
     }
 
     switch (statType2.innerHTML) {
+        case "Bug":
+            type1Container.appendChild(bugLogo)
+            break;
         case "Dark":
             type2Container.appendChild(darkLogo)
             break;
@@ -691,6 +725,9 @@ function createPokemon(pokemon) {
             break;
         case "Rock":
             type2Container.appendChild(rockLogo)
+            break;
+        case "Steel":
+            type2Container.appendChild(steelLogo)
             break;
         case "Water":
             type2Container.appendChild(waterLogo)
