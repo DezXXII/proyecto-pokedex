@@ -219,7 +219,7 @@ input:focus {
     margin-right: 1rem;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 768px) {
     
 /** Global Configurations **/
 
@@ -440,7 +440,7 @@ input:focus {
 
 /** Media Queries **/
 
-@media (max-width: 250px) {
+@media (max-width: 768px) {
 
     html {
         overflow-x: hidden;
@@ -454,7 +454,7 @@ input:focus {
     }
 
     .header-container h1 {
-        font-size: 4.5rem;
+        font-size: 45px
     }
 
     .header-container p {
