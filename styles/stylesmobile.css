@@ -1,0 +1,462 @@
+/** Global Configurations **/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(../img/app-background.png);
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Open Sans';
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 5rem;
+}
+
+/** Header Container **/
+
+.header-container {
+    text-align: center;
+}
+
+.header-container h1 {
+    font-size: 8rem;
+    margin-bottom: -1.5rem;
+    margin-top: 1rem;
+}
+
+.header-container p {
+    font-size: 4rem;
+}
+
+/** Search Pokemon Input **/
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+input {
+    /* padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 10rem; */
+
+    padding: 1.5rem 10rem 1.5rem 1rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+/** Pokemons Container **/
+
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.pokemon-block {
+    background-color: white;
+    border-radius: 2rem;
+    width: 30rem;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.pokemon-block p {
+    color: black;
+}
+
+.pokemon-block img {
+    width: 11rem;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.img-container {
+    background-image: url(../img/blob.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/** Searched Pokemon Container **/
+
+.searched-pokemon-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 1rem;
+}
+
+/** Flip Card Container **/
+
+.pokemon-block-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    bottom: 10.4%;
+    backface-visibility: hidden;
+    color: black;
+    background-color: white;
+    background-color: white;
+    width: 30rem;
+    height: 226.13px;
+    border-radius: 2rem;
+}
+
+.pokemon-block-back p {
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.flip-card:hover .card-container {
+    transform: rotateY(180deg);
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/** Types Container **/
+
+.types {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+}
+
+/** Individual Type Container **/
+
+.type1, .type2 {
+    display: flex;
+}
+
+/** Stats Container **/
+
+.stats p {
+    font-size: 1.7rem;
+    margin: 0;
+    margin-left: 8.4rem;
+    text-align: justify;
+}
+
+/** Buttons **/
+
+.btnDelete {
+    padding: 1.5rem;
+    background-color: #990000;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+}
+
+.btnDelete:hover {
+    cursor: pointer;
+    background-color: #660000;
+}
+
+/** Pagination **/
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3.5rem;
+}
+
+.prevBtn, .nextBtn {
+    color: white;
+    padding: 1rem;
+    background-color: #1aa3ff;
+    border: none;
+    border-radius: .5rem;
+    text-shadow: 1px 1px 1px black;
+}
+
+.prevBtn:hover, .nextBtn:hover {
+    cursor: pointer;
+    background: cornflowerblue;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
+    box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+}
+
+/** Svg Images Section **/
+
+.svg-image {
+    width: 3rem;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 300px) {
+    
+/** Global Configurations **/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(../img/app-background.png);
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Open Sans';
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+/** Header Container **/
+
+.header-container {
+    text-align: center;
+}
+
+.header-container h1 {
+    font-size: 6rem;
+    margin-bottom: -1.5rem;
+    margin-top: 1rem;
+}
+
+.header-container p {
+    font-size: 3rem;
+}
+
+/** Search Pokemon Input **/
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+input {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: .5rem;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+/** Pokemons Container **/
+
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.pokemon-block {
+    background-color: white;
+    border-radius: 2rem;
+    width: 28rem;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.pokemon-block p {
+    color: black;
+}
+
+.pokemon-block img {
+    width: 11rem;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+.img-container {
+    background-image: url(../img/blob.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/** Searched Pokemon Container **/
+
+.searched-pokemon-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/** Flip Card Container **/
+
+.pokemon-block-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    bottom: 10.4%;
+    backface-visibility: hidden;
+    color: black;
+    background-color: white;
+    background-color: white;
+    width: 28rem;
+    height: 226.13px;
+    border-radius: 2rem;
+}
+
+.pokemon-block-back p {
+    margin: 0;
+    margin-top: 2rem;
+}
+
+.flip-card:hover .card-container {
+    transform: rotateY(180deg);
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/** Types Container **/
+
+.types {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
+}
+
+/** Individual Type Container **/
+
+.type1, .type2 {
+    display: flex;
+}
+
+/** Stats Container **/
+
+.stats p {
+    font-size: 1.7rem;
+    margin: 0;
+    margin-left: 8.4rem;
+    text-align: justify;
+}
+
+/** Buttons **/
+
+.btnDelete {
+    padding: 1rem;
+    background-color: #990000;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: -1.2rem;
+    margin-left: 1.5px;
+}
+
+.btnDelete:hover {
+    cursor: pointer;
+    background-color: #660000;
+}
+
+/** Pagination **/
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3.5rem;
+}
+
+.prevBtn, .nextBtn {
+    color: white;
+    padding: 1rem;
+    background-color: #1aa3ff;
+    border: none;
+    border-radius: .5rem;
+    text-shadow: 1px 1px 1px black;
+}
+
+.prevBtn:hover, .nextBtn:hover {
+    cursor: pointer;
+    background: cornflowerblue;
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
+    box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+}
+
+/** Svg Images Section **/
+
+.svg-image {
+    width: 3rem;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+}
+}
+
+/** Media Queries **/
+
+@media (max-width: 300px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .pokemon-block, .pokemon-block-back {
+        width: 25rem;
+    }
+
+    input {
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+}
