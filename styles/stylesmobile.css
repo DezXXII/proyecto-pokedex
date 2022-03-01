@@ -440,7 +440,7 @@ input:focus {
 
 /** Media Queries **/
 
-@media (min-width: 300px) {
+@media (max-width: 250px) {
 
     html {
         overflow-x: hidden;
@@ -450,13 +450,23 @@ input:focus {
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
+        overflow-x: hidden;
+    }
+
+    .header-container h1 {
+        font-size: 4.5rem;
+    }
+
+    .header-container p {
+        font-size: 2.5rem;
     }
 
     .pokemon-block, .pokemon-block-back {
-        width: 25rem;
+        width: 20rem;
     }
 
     input {
-        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+        font-size: 1.5rem;
+        padding: 1.5rem .5rem 1.5rem .8rem;
     }
 }
