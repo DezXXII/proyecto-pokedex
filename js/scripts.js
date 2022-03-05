@@ -139,6 +139,7 @@ function searchedPokemon(pokemon) {
         const cardBack = document.createElement('div');
 
         const cardBackTitle = document.createElement('p');
+        cardBackTitle.classList.add('back-title')
         cardBackTitle.textContent = "Pokemon Stats";
 
         cardBack.classList.add('pokemon-block-back');
@@ -488,6 +489,7 @@ function createPokemon(pokemon) {
     const cardBack = document.createElement('div');
 
     const cardBackTitle = document.createElement('p');
+    cardBackTitle.classList.add('back-title')
     cardBackTitle.textContent = "Pokemon Stats";
 
     cardBack.classList.add('pokemon-block-back');

@@ -2,7 +2,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    overflow-x: hidden;
 }
 *,
 *:before,
@@ -13,11 +13,10 @@ html {
 body {
     background-image: url(../img/app-background.png);
     color: white;
-    font-size: 1.8rem;
     font-family: 'Open Sans';
-    margin-left: 10rem;
-    margin-right: 10rem;
-    margin-bottom: 5rem;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    overflow-x: hidden;
 }
 
 /** Header Container **/
@@ -27,33 +26,30 @@ body {
 }
 
 .header-container h1 {
-    font-size: 8rem;
-    margin-bottom: -1.5rem;
-    margin-top: 1rem;
+    font-size: 50px;
+    margin-bottom: -10px;
+    margin-top: 10px;
 }
 
 .header-container p {
-    font-size: 4rem;
+    font-size: 30px;
 }
 
 /** Search Pokemon Input **/
 
 .form-container {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    text-align: center;
-    margin-bottom: 4rem;
+    flex-direction: column;
+    gap: 5px;
+    width: 196px;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 input {
-    /* padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 10rem; */
-
-    padding: 1.5rem 10rem 1.5rem 1rem;
-    border-radius: .5rem;
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 5px;
     border: none;
 }
 
@@ -67,13 +63,14 @@ input:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4rem;
+    gap: 40px
 }
 
 .pokemon-block {
     background-color: white;
-    border-radius: 2rem;
-    width: 30rem;
+    border-radius: 20px;
+    width: 280px;
+    height: 220px;
     text-align: center;
     backface-visibility: hidden;
 }
@@ -82,14 +79,10 @@ input:focus {
     color: black;
 }
 
-.pokemon-block img {
-    width: 11rem;
-}
-
 .name {
     font-weight: 700;
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
+    font-size: 25px;
+    padding-bottom: 20px;
 }
 
 .img-container {
@@ -103,8 +96,8 @@ input:focus {
 .searched-pokemon-container {
     display: flex;
     justify-content: center;
-    gap: 4rem;
-    margin-bottom: 1rem;
+    gap: 40px;
+    margin-bottom: 35px;
 }
 
 /** Flip Card Container **/
@@ -112,19 +105,28 @@ input:focus {
 .pokemon-block-back {
     transform: rotateY(180deg);
     position: absolute;
-    bottom: 10.4%;
+    bottom: 0%;
     backface-visibility: hidden;
     color: black;
     background-color: white;
-    background-color: white;
-    width: 30rem;
-    height: 226.13px;
-    border-radius: 2rem;
+    width: 280px;
+    height: 220px;
+    border-radius: 20px;
 }
+
+.pokemon-block img {
+    width: 110px;
+}
+
 
 .pokemon-block-back p {
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 20px;
+}
+
+.back-title {
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
 }
 
 .flip-card:hover .card-container {
@@ -146,33 +148,31 @@ input:focus {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 3rem;
-    margin-top: -.5rem;
-    margin-bottom: 1rem;
+    gap: 30px;
+    margin-bottom: 15px;
+    margin-top: -15px;
 }
 
 /** Individual Type Container **/
 
 .type1, .type2 {
-    display: flex;
+    display: flex
 }
 
 /** Stats Container **/
 
 .stats p {
-    font-size: 1.7rem;
+    font-size: 17px;
     margin: 0;
-    margin-left: 8.4rem;
-    text-align: justify;
+    text-align: center;
 }
 
 /** Buttons **/
 
 .btnDelete {
-    padding: 1.5rem;
     background-color: #990000;
     border: none;
-    border-radius: .5rem;
+    border-radius: 5px;
     color: white;
 }
 
@@ -186,16 +186,16 @@ input:focus {
 .pagination-buttons {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 3.5rem;
+    gap: 20px;
+    margin-top: 35px;
 }
 
 .prevBtn, .nextBtn {
     color: white;
-    padding: 1rem;
+    padding: 10px;
     background-color: #1aa3ff;
     border: none;
-    border-radius: .5rem;
+    border-radius: 5px;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -214,225 +214,54 @@ input:focus {
 /** Svg Images Section **/
 
 .svg-image {
-    width: 3rem;
-    margin-top: 1.5rem;
-    margin-right: 1rem;
+    width: 30px;
+    margin-top: 15px;
+    margin-right: 10px;
 }
 
-@media (max-width: 480px) {
-    
-/** Global Configurations **/
+@media (min-width: 768px) {
 
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-}
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
+    /** Header Container **/
 
-body {
-    background-image: url(../img/app-background.png);
-    color: white;
-    font-size: 1.8rem;
-    font-family: 'Open Sans';
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-}
+    .header-container h1 {
+        font-size: 80px;
+    }
 
-/** Header Container **/
+    .header-container p {
+        font-size: 30px;
+    }
 
-.header-container {
-    text-align: center;
-}
+    /** Search Pokemon Input **/
 
-.header-container h1 {
-    font-size: 8rem;
-    margin-bottom: -1.5rem;
-    margin-top: 1rem;
-}
+    .form-container {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 20px;
+    }
 
-.header-container p {
-    font-size: 3rem;
-}
+    input {
+        padding: 15px 100px 15px 10px;
+        font-size: 18px;
+    }
 
-/** Search Pokemon Input **/
+    /** Pokemons Container **/
 
-.form-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
+    .pokemon-block {
+        width: 300px;
+        height: 226px;
+    }
 
-input {
-    padding: 1.5rem 10rem 1.5rem 1rem;
-    border-radius: .5rem;
-    border: none;
-}
+    .pokemon-block-back {
+        width: 300px;
+        height: 226px;
+    }
 
-input:focus {
-    outline: none;
-}
+    /** Buttons **/
 
-/** Pokemons Container **/
-
-.pokemon-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4rem;
-}
-
-.pokemon-block {
-    background-color: white;
-    border-radius: 2rem;
-    width: 30rem;
-    text-align: center;
-    backface-visibility: hidden;
-}
-
-.pokemon-block p {
-    color: black;
-}
-
-.pokemon-block img {
-    width: 11rem;
-}
-
-.name {
-    font-weight: 700;
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
-}
-
-.img-container {
-    background-image: url(../img/blob.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/** Searched Pokemon Container **/
-
-.searched-pokemon-container {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-/** Flip Card Container **/
-
-.pokemon-block-back {
-    transform: rotateY(180deg);
-    position: absolute;
-    bottom: 10.4%;
-    backface-visibility: hidden;
-    color: black;
-    background-color: white;
-    background-color: white;
-    width: 30rem;
-    height: 226.13px;
-    border-radius: 2rem;
-}
-
-.pokemon-block-back p {
-    margin: 0;
-    margin-top: 2rem;
-}
-
-.flip-card:hover .card-container {
-    transform: rotateY(180deg);
-}
-
-.card-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-/** Types Container **/
-
-.types {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: -.5rem;
-    margin-bottom: 1rem;
-}
-
-/** Individual Type Container **/
-
-.type1, .type2 {
-    display: flex;
-}
-
-/** Stats Container **/
-
-.stats p {
-    font-size: 1.7rem;
-    margin: 0;
-    margin-left: 8.4rem;
-    text-align: justify;
-}
-
-/** Buttons **/
-
-.btnDelete {
-    padding: 1.2rem;
-    background-color: #990000;
-    border: none;
-    border-radius: .5rem;
-    color: white;
-    font-size: 1.5rem;
-    margin-top: -1.2rem;
-}
-
-.btnDelete:hover {
-    cursor: pointer;
-    background-color: #660000;
-}
-
-/** Pagination **/
-
-.pagination-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3.5rem;
-}
-
-.prevBtn, .nextBtn {
-    color: white;
-    padding: 1rem;
-    background-color: #1aa3ff;
-    border: none;
-    border-radius: .5rem;
-    text-shadow: 1px 1px 1px black;
-}
-
-.prevBtn:hover, .nextBtn:hover {
-    cursor: pointer;
-    background: cornflowerblue;
-    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
-    -moz-box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
-    box-shadow: 0px 0px 5px 3px rgba(0,77,128,1);
-}
-
-.disabled:hover {
-    cursor: not-allowed;
-}
-
-/** Svg Images Section **/
-
-.svg-image {
-    width: 3rem;
-    margin-top: 1.5rem;
-    margin-right: 1rem;
-}
+    .btnDelete {
+        height: 50px;
+        width: 249px;
+        font-size: 18px;
+    }
 }
