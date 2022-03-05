@@ -11,6 +11,18 @@ async function fetchPokemon(id) {
     })
 }
 
+// const fetchPokemon = async (id) => {
+//     try {
+//         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+//         const data = await res.json()
+//         .then( data => {
+//             createPokemon(data);
+//         })
+//     } catch (error) {
+//         console.log('error')
+//     }    
+// }
+
 let offset = 1;
 let limit = 9;
 
@@ -24,14 +36,14 @@ window.onload = previousPaginationButton.classList.add('disabled');
 
 previousPaginationButton.addEventListener('click', (e) => {
     if (offset != 1) { 
-        offset -= 9;
+        offset -= 10;
         removeChildNodes(pokemonContainer)
         fetchPokemons(offset, limit);
     }
 })
 
 nextPaginationButton.addEventListener('click', (e) => {
-    offset += 9;
+    offset += 10;
     removeChildNodes(pokemonContainer)
     fetchPokemons(offset, limit);
 
@@ -42,9 +54,9 @@ nextPaginationButton.addEventListener('click', (e) => {
     previousPaginationButton.classList.remove('disabled');
 })
 
-function fetchPokemons(offset, limit) {
+async function fetchPokemons(offset, limit) {
     for (let i = offset; i <= offset + limit; i++) {
-        fetchPokemon(i);
+        await fetchPokemon(i);
     }
 }
 
