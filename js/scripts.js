@@ -11,18 +11,6 @@ async function fetchPokemon(id) {
     })
 }
 
-// const fetchPokemon = async (id) => {
-//     try {
-//         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-//         const data = await res.json()
-//         .then( data => {
-//             createPokemon(data);
-//         })
-//     } catch (error) {
-//         console.log('error')
-//     }    
-// }
-
 let offset = 1;
 let limit = 9;
 
